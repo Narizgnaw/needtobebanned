@@ -1,4 +1,4 @@
-# Needtobebanned 不友好的IP列表
+# Needtobebanned 一些需要封禁的IP列表
 
 
 这个库用来实时记录对我公有云主机不友好的IP地址
