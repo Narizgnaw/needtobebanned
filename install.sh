@@ -10,10 +10,10 @@ fi
 default_script_path="/opt"
 default_hours="1"
 
-read -p "这个脚本将下载autoipset.sh并设置权限。请输入autoipset.sh的安装路径[$default_script_path]: " script_path
+read -p "这个脚本将下载autoipset.sh并设置权限。请输入autoipset.sh的安装路径[默认是$default_script_path]: " script_path
 script_path=${script_path:-$default_script_path}
 
-read -p "请输入每隔多少小时执行一次脚本[$default_hours]: " hours
+read -p "请输入每隔多少小时执行一次脚本[默认是$default_hours]: " hours
 hours=${hours:-$default_hours}
 
 # 验证用户输入的是一个数字
@@ -28,9 +28,11 @@ if [[ $choice == "y" || $choice == "Y" || $choice == "" ]]; then
     wget https://narizgnaw.github.io/needtobebanned/autoipset.sh -O "$script_path/autoipset.sh"
 
     # 设置脚本权限
+	echo "正在设置脚本权限，报错的话一般是没有使用root账户运行"
     chmod +x "$script_path/autoipset.sh"
 
     # 添加crontab任务
+	echo "正在添加定时任务，报错的话一般是没有使用root账户运行"
     (crontab -l ; echo "0 */$hours * * * sh $script_path/autoipset.sh") | crontab -
 else
     echo "安装已取消"
