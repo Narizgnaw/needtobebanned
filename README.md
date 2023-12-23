@@ -1,8 +1,8 @@
 # Needtobebanned 需要封禁的IP列表+自动封禁脚本
 
-这个库用来实时记录对我公有云主机不友好的IP地址
+这个库用来实时记录对我公有云主机不友好的IP地址，大部分为情报平台的扫描IP。
 
-This repositories is used to real-time record IP addresses that are not friendly to my public cloud servers.
+This repositories is used to real-time record unfriendly IP addresses to my public cloud servers, most of which are scanning IPs from intelligence platforms.
 
 如果你有IP封禁的需求，这个IP列表可以作为参考。
 
@@ -22,9 +22,9 @@ Principle: Detecting an IP attempting to connect to a closed port on my VPS -> B
 
 # 一键使用脚本 One-Click Command
 
-功能：使用crontab定期下载IP黑名单，并使用IPSET封禁，请确认你的主机已接入互联网
+功能：使用crontab定期下载IP黑名单，并使用IPSET封禁，请确认你的主机已接入国际互联网
 
-Function: Use crontab to periodically download IP blacklist and use IPSET for banning. Please make sure your host is connected to the Internet.
+Function: Use crontab to periodically download IP blacklist and use IPSET for banning. Please make sure your host is connected to the Global Internet.
 
 ```shell
 bash <(wget -qO- -o- https://narizgnaw.github.io/needtobebanned/install.sh)
