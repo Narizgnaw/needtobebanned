@@ -34,6 +34,9 @@ if [[ $choice == "y" || $choice == "Y" || $choice == "" ]]; then
     # 添加crontab任务
 	echo "正在添加定时任务，报错的话一般是没有使用root账户运行"
     (crontab -l ; echo "0 */$hours * * * sh $script_path/autoipset.sh") | crontab -
+    echo "已运行完成，如果没有报错，脚本将每隔 $hours 小时自动执行一次，请确认你已经接入互联网"
+	echo "可以通过crontab -e命令查看配置的定期任务情况"
+    echo "可以通过ipset list命令查看已经封禁的IP"
 else
     echo "安装已取消"
 fi
