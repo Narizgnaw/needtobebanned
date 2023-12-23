@@ -1,6 +1,9 @@
 #!/bin/bash
 
+    echo "这个脚本功能为：使用crontab周期自动下载IP黑名单，并使用IPSET进行封禁"
+
 # 检查是否已安装ipset
+    echo "正在检测系统是否安装了IPset"
 if ! command -v ipset &> /dev/null; then
     echo "系统未安装ipset，请手动安装ipset后再运行此脚本。"
     exit 1

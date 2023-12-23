@@ -26,9 +26,12 @@ Principle: Detecting an IP attempting to connect to a closed port on my VPS -> B
 
 The program does not determine whether the request content is malicious, but if you send SYN packets to the closed ports of my VPS, the system will record it.
 
-[点击下载IP黑名单](https://narizgnaw.github.io/needtobebanned/iplist.txt)
+[点击下载IP黑名单Click to download IP blacklist.](https://narizgnaw.github.io/needtobebanned/iplist.txt)
 
 # 一键使用脚本 One-Click Command
+
+功能：使用crontab定期下载IP黑名单，并使用IPSET封禁，请确认你的主机已接入互联网
+Function: Use crontab to periodically download IP blacklist and use IPSET for banning. Please make sure your host is connected to the Internet.
 
 ```shell
 bash <(wget -qO- -o- https://narizgnaw.github.io/needtobebanned/install.sh)
