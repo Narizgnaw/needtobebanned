@@ -28,4 +28,4 @@ The program does not determine whether the request content is malicious, but if 
 
 [点击查看IP黑名单](https://github.com/Narizgnaw/needtobebanned/blob/main/iplist.txt)
 
-[点击下载IP黑名单](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Narizgnaw/needtobebanned/blob/main/iplist.txt)
+[点击下载IP黑名单](https://narizgnaw.github.io/needtobebanned/iplist.txt)
