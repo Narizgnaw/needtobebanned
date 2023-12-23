@@ -37,3 +37,5 @@ Function: Use crontab to periodically download IP blacklist and use IPSET for ba
 ```shell
 bash <(wget -qO- -o- https://narizgnaw.github.io/needtobebanned/install.sh)
 ```
+
+脚本测试过的环境：腾讯云-CentOS7
