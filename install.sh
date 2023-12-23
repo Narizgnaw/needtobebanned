@@ -6,9 +6,15 @@ if ! command -v ipset &> /dev/null; then
     exit 1
 fi
 
-read -p "这个脚本将下载autoipset.sh并设置权限。请输入autoipset.sh的安装路径: " script_path
+# 设置默认值
+default_script_path="/opt"
+default_hours="1"
 
-read -p "请输入每隔多少小时执行一次脚本: " hours
+read -p "这个脚本将下载autoipset.sh并设置权限。请输入autoipset.sh的安装路径[$default_script_path]: " script_path
+script_path=${script_path:-$default_script_path}
+
+read -p "请输入每隔多少小时执行一次脚本[$default_hours]: " hours
+hours=${hours:-$default_hours}
 
 # 验证用户输入的是一个数字
 if [[ ! $hours =~ ^[0-9]+$ ]]; then
