@@ -8,13 +8,13 @@ This repositories is used to real-time record IP addresses that are not friendly
 
 If you have IP blocking requirements, this IP list can be used as a reference.
 
-原理：监测到有IP连我VPS未开放的端口 -> 封禁IP -> 每5分钟提交到Github
-
-Principle: Detecting an IP attempting to connect to a closed port on my VPS -> Block the IP -> Submit to Github every 5 minutes.
-
 程序不会判断请求内容是否是恶意的，但是如果你向我的VPS未开放端口发送SYN数据包超过3次，就会被程序记录。
 
 The program does not determine whether the request content is malicious, but if you send SYN packets to the closed ports of my VPS, the system will record it.
+
+原理：监测到有IP连我VPS未开放的端口 -> 封禁IP -> 每5分钟提交到Github
+
+Principle: Detecting an IP attempting to connect to a closed port on my VPS -> Block the IP -> Submit to Github every 5 minutes.
 
 [点击下载IP黑名单](https://narizgnaw.github.io/needtobebanned/iplist.txt)
 
@@ -31,6 +31,7 @@ bash <(wget -qO- -o- https://narizgnaw.github.io/needtobebanned/install.sh)
 ```
 
 脚本测试过的环境：腾讯云新加坡-轻量应用服务器-CentOS7.6
+
 Script tested environment: Tencent Cloud Singapore - Lightweight Application Server - CentOS 7.6
 
 此项目所有代码由ChatGPT 3.5生成。本人不懂代码也不懂英语，没有维护此项目的能力。
