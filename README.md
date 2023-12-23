@@ -1,4 +1,4 @@
-# Needtobebanned 一些需要封禁的IP列表
+# Needtobebanned 需要封禁的IP列表+自动封禁脚本
 
 
 这个库用来实时记录对我公有云主机不友好的IP地址
@@ -31,6 +31,7 @@ The program does not determine whether the request content is malicious, but if 
 # 一键使用脚本 One-Click Command
 
 功能：使用crontab定期下载IP黑名单，并使用IPSET封禁，请确认你的主机已接入互联网
+
 Function: Use crontab to periodically download IP blacklist and use IPSET for banning. Please make sure your host is connected to the Internet.
 
 ```shell
