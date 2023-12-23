@@ -22,8 +22,8 @@ if [[ ! $hours =~ ^[0-9]+$ ]]; then
     exit 1
 fi
 
-read -p "你确定要将autoipset.sh安装到 $script_path，并每隔 $hours 小时执行一次脚本吗？(y/n) " choice
-if [[ $choice == "y" || $choice == "Y" ]]; then
+read -p "你确定要将脚本下载到 $script_path，并每隔 $hours 小时执行一次脚本吗？(y/n) " choice
+if [[ $choice == "y" || $choice == "Y" || $choice == "" ]]; then
     # 下载autoipset.sh脚本
     wget https://narizgnaw.github.io/needtobebanned/autoipset.sh -O "$script_path/autoipset.sh"
 
