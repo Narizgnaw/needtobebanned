@@ -38,6 +38,7 @@ if [[ $choice == "y" || $choice == "Y" || $choice == "" ]]; then
 	echo "正在添加定时任务，报错的话一般是没有使用root账户运行"
     (crontab -l ; echo "0 */$hours * * * sh $script_path/autoipset.sh") | crontab -
 	# 更新iptables规则
+	echo "正在更新iptables规则，首次安装会显示Bad rule正常的"
 	iptables -D INPUT -m set --match-set blocked_ips src -j DROP
 	iptables -I INPUT -m set --match-set blocked_ips src -j DROP
     echo "已运行完成，如果没有报错，脚本将每隔 $hours 小时自动执行一次，请确认你已经接入互联网"
