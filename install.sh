@@ -42,7 +42,7 @@ if [[ $choice == "y" || $choice == "Y" || $choice == "" ]]; then
 	iptables -D INPUT -m set --match-set blocked_ips src -j DROP
 	iptables -I INPUT -m set --match-set blocked_ips src -j DROP
     echo "已运行完成，如果没有报错，脚本将每隔 $hours 小时自动执行一次，请确认你已经接入互联网"
-	echo "可以通过crontab -e命令查看配置的定期任务情况"
+	echo "可以通过crontab -e命令查看配置的定期任务情况，请注意不要多次运行此安装脚本，多次运行会在crontab上创建多个任务，需手动删除"
     echo "可以通过ipset list命令查看已经封禁的IP"
 else
     echo "安装已取消"
